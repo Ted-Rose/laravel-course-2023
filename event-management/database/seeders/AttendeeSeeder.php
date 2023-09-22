@@ -17,9 +17,9 @@ class AttendeeSeeder extends Seeder
 
         // Make every user attend random events
         foreach ($users as $user) {
-          $eventstoAttend = $events->random(rand(1,3));
+          $eventsToAttend = $events->random(rand(1,3));
           
-          foreach ($eventstoAttend as $event) {
+          foreach ($eventsToAttend as $event) {
             \App\Models\Attendee::create([
               // Take user_id as we itterate over all the users
               'user_id' => $user->id,
