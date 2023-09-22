@@ -64,7 +64,10 @@ Route::post('/tasks', function (Request $request) {
     $task->save();
 
     // Redirecting user to the newly created task page
-    return redirect()->route('tasks.show', ['id' => $task->id]);
+    return redirect()->route('tasks.show', ['id' => $task->id])
+    // Create flash message. When first time accessed they are removed
+    // On the following requests it won't be in the session
+      ->with('success', 'Task created successfully!');
 })->name('tasks.store');
 
 // Route::get('/xxx', function () {
