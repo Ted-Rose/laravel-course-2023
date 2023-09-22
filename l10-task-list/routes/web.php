@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Requests\TaskRequest;
 use App\Models\Task;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
@@ -29,82 +30,54 @@ Route::get('/tasks', function () {
 Route::view('/tasks/create', 'create')
     ->name('tasks.create');
 
-Route::get('/tasks/{id}/edit', function ($id) {
+// Type hint Task so that automatically it would automatically
+// fetch findOrFail method
+Route::get('/tasks/{task}/edit', function (Task $task) {
     return view('edit', [
-        'task' => Task::findOrFail($id)
+      // If model won't be found then 404 error will be returend
+        'task' => $task
     ]);
 })->name('tasks.edit');
 
-Route::get('/tasks/{id}', function ($id) {
+Route::get('/tasks/{task}', function (Task $task) {
     return view('show', [
-        'task' => Task::findOrFail($id)
+        'task' => $task
     ]);
 })->name('tasks.show');
 
-Route::post('/tasks', function (Request $request) {
-    $data = $request->validate([
-      // When calling request's validate method it will use all the
-      // data that was sent from farm to validate it and use the
-      // keys to check the fields to validation rules
-        'title' => 'required|max:255',
-        'description' => 'required',
-        'long_description' => 'required'
-    ]);
-
-    // If error happens than the user pack will be redirected to the
-    // last page and will set a session variable to error
-    // Session data will contain all errors
-
-    // If everything is fine then laravel will define task with
-    //the following parameters
-    $task = new Task;
-    $task->title = $data['title'];
-    $task->description = $data['description'];
-    $task->long_description = $data['long_description'];
-
-    // Call the models save method to save data to the database
-    // Laravel is smart enough to allow you to work with models
-    // that are loaded from the db and calling save should call
-    // an update query, but if you created a new task it should
-    // call an insert query
-    $task->save();
-
-    // Redirecting user to the newly created task page
-    return redirect()->route('tasks.show', ['id' => $task->id])
-    // Create flash message. When first time accessed they are removed
-    // On the following requests it won't be in the session
+// Add TaskRequest to type hint to automate validation
+Route::post('/tasks', function (TaskRequest $request) {
+  // Run `php artisan make:request TaskRequest` to create a class
+  // Validation will happen before entering this function
+  // If you can call request()->validate() then it means you already
+  // have valid data
+    // $data = request()->validated();
+    // $task = new Task;
+    // $task->title = $data['title'];
+    // $task->description = $data['description'];
+    // $task->long_description = $data['long_description'];
+    // $task->save();
+  
+    // You can create new model, set all the attributes and save with one line:
+    $task = Task::create($request->validated());
+    
+    return redirect()->route('tasks.show', ['task' => $task->id])
       ->with('success', 'Task created successfully!');
 })->name('tasks.store');
 
-Route::put('/tasks/{id}/edit', function ($id, Request $request) {
-    $data = $request->validate([
-        'title' => 'required|max:255',
-        'description' => 'required',
-        'long_description' => 'required'
-    ]);
+Route::put('/tasks/{task}', function (Task $task, TaskRequest $request) {
+    // $data = request()->validated();
+    // $task->title = $data['title'];
+    // $task->description = $data['description'];
+    // $task->long_description = $data['long_description'];
+    // $task->save();
 
-    $task = Task::findOrFail($id);
-    $task->title = $data['title'];
-    $task->description = $data['description'];
-    $task->long_description = $data['long_description'];
-    // Modifying existing task automatically updates it on save
-    $task->save();
+    // update acts same as task create, but only operating on already existing model
+    $task->update($request->validated());
 
-    return redirect()->route('tasks.show', ['id' => $task->id])
+    return redirect()->route('tasks.show', ['task' => $task->id])
       ->with('success', 'Task updated successfully!');
 })->name('tasks.update');
-
-// Route::get('/xxx', function () {
-//     return 'Hello';
-// })->name('hello');
-
-// Route::get('/hallo', function () {
-//     return redirect()->route('hello');
-// });
-
-// Route::get('/greet/{name}', function ($name) {
-//     return 'Hello ' . $name . '!';
-// });
 
 Route::fallback(function () {
     return 'Still got somewhere!';
