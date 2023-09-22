@@ -83,6 +83,19 @@ Route::put('/tasks/{task}', function (Task $task, TaskRequest $request) {
       ->with('success', 'Task updated successfully!');
 })->name('tasks.update');
 
+// Fetch the task with function (Task $task)
+Route::put('/tasks/{task}/toggle-complete', function (Task $task) {
+  // // Reversing tasks state
+  // $task->completed = !$task->completed;
+  // $task->save();
+
+  // Or simply assign a method that reverses tasks state
+  $task->toggleComplete();
+
+  // Redirect to the previous page
+  return redirect()->back()->with('success', 'Task updated successfully!');
+})->name('tasks.toggle-complete');
+
 // Again using route model binding to bind task
 // If the task won't exist then 404 error will be returend
 Route::delete('/tasks/{task}', function (Task $task) {

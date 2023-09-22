@@ -21,9 +21,16 @@ class Task extends Model
     // at one call, you can use guarded to define the attributes that
     // should not be mass assigned. Meaning all the rest properties
     // can be mass assigned (not a safe practie)
-    protected $guarded = [
-      'secret'
-    ];
+    // protected $guarded = [
+    //   'secret'
+    // ];
+
+    public function toggleComplete()
+    {
+      // Reversing tasks state
+      $this->completed = !$this->completed;
+      $this->save();
+    }
 
 // If you have slug property then it will use the slug
 // to identify the model using the route model binding
