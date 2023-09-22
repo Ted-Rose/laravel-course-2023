@@ -12,11 +12,6 @@
 @endsection
 
 @section('content')
-{{-- Special $errors variable is avaible to all views.
-It doesn't need to be passed from any routes --}}
-{{-- {{ $errors }} --}}
-{{-- $errors are created if an error occurs. For example
-if you submit empty form --}}
   <form method="POST" action="{{ route('tasks.store') }}">
     @csrf
     <div>
@@ -32,8 +27,6 @@ if you submit empty form --}}
 
     <div>
       <label for="description">Description</label>
-      {{-- The old helper works only with forms that are sent using POST method.
-      DON'T USE OLD METHOD WITH CREDENTIALS!!!! --}}
       <textarea name="description" id="description" rows="5">{{ old('description') }}</textarea>
       @error('description')
         <p class="error-message">{{ $message }}</p>
