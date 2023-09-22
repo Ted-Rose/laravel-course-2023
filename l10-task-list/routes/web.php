@@ -79,6 +79,18 @@ Route::put('/tasks/{task}', function (Task $task, TaskRequest $request) {
       ->with('success', 'Task updated successfully!');
 })->name('tasks.update');
 
+// Again using route model binding to bind task
+// If the task won't exist then 404 error will be returend
+Route::delete('/tasks/{task}', function (Task $task) {
+  // If we get till this line then it means task exists.
+  // The models have delete method that removes record from db.
+    $task->delete();
+
+    return redirect()->route('tasks.index')
+      ->with('success', 'Task deleted successfully!');
+// In laravel mostly deletion tasks ar called destroy
+})->name('tasks.destroy');
+
 Route::fallback(function () {
     return 'Still got somewhere!';
 });
