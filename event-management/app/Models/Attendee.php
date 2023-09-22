@@ -11,7 +11,10 @@ class Attendee extends Model
     use HasFactory;
 
     public function user(): BelongsTo
+    // There is always an user associated to an attendee
     {
+        // Since all models are in the same name space no need
+        // to import classes like User or Event
         return $this->belongsTo(User::class);
     }
 

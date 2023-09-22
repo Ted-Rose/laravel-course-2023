@@ -13,7 +13,10 @@ return new class extends Migration {
         Schema::create('attendees', function (Blueprint $table) {
             $table->id();
 
+            // Create one to many relationship so that one user
+            // can attend many events
             $table->foreignIdFor(User::class);
+            // Specify which event user attends
             $table->foreignIdFor(Event::class);
 
             $table->timestamps();

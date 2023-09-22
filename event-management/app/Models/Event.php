@@ -11,6 +11,7 @@ class Event extends Model
 {
     use HasFactory;
 
+    // Return type is optional - BelongsTo
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);

@@ -13,6 +13,11 @@ return new class extends Migration {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
 
+            // Create one to many relationship so that one user
+            // can own many events. Using shortcut method
+            // foreignIdFor() creates both the column that holds
+            // the relationship and add an foreign key for that
+            // column
             $table->foreignIdFor(User::class);
             $table->string('name');
             $table->text('description')->nullable();

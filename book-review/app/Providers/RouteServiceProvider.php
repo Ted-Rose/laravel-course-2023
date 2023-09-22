@@ -7,7 +7,10 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
+use Monolog\Processor\WebProcessor;
 
+// Provider classes set up Laravel applications telling how to behave.
+// RouteServiceProvider is responsible for configuring routes for your application.
 class RouteServiceProvider extends ServiceProvider
 {
     /**
@@ -27,6 +30,9 @@ class RouteServiceProvider extends ServiceProvider
         $this->configureRateLimiting();
 
         $this->routes(function () {
+          // Here is defined that routes have to be loaded from api and Web
+          // folders. Plus you need to prefix al routes with api and apply
+          // middleware from api and for web you apply middleware for web
             Route::middleware('api')
                 ->prefix('api')
                 ->group(base_path('routes/api.php'));
