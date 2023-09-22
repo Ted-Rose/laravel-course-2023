@@ -23,7 +23,11 @@ Route::get('/', function () {
 
 Route::get('/tasks', function () {
     return view('index', [
-        'tasks' => Task::latest()->get()
+        // Fetch all tasks and display pagination
+        // also generate links to each page and automatically
+        // read any querry parameters that are added to the page.
+        // Set number of items to show per page.
+        'tasks' => Task::latest()->paginate(10)
     ]);
 })->name('tasks.index');
 
