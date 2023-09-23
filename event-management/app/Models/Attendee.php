@@ -10,6 +10,9 @@ class Attendee extends Model
 {
     use HasFactory;
 
+    // Enable mass assignment to user_id
+    protected $fillable = ['user_id'];
+
     public function user(): BelongsTo
     // There is always an user associated to an attendee
     {

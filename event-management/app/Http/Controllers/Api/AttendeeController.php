@@ -3,47 +3,46 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\AttendeeResource;
+use App\Models\Attendee;
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class AttendeeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function index(Event $event)
     {
-        //
+        $attendees = $event->attendees()->latest();
+
+        return AttendeeResource::collection(
+          $attendees->paginate()
+        );
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request, Event $event)
+    {   
+      // Not only attendee will be created, but also automatically
+      // set event_id to the Event model that is inputed in store method
+        $attendee = $event->attendees()->create([
+          // For now let's hard code the user_id
+          'user_id' => 1
+        ]);
+
+        return new AttendeeResource($attendee);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function show(Event $event, Attendee $attendee)
     {
-        //
+        return new AttendeeResource($attendee);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    // Only second input has to be type hinted as Attende. We don't
+    // need event model fetched here for we don't use it. So we
+    // don't unnecessarily fetch it.
+    public function destroy(string $event, Attendee $attendee)
     {
-        //
-    }
+      $attendee->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+      return response(status: 204);
     }
 }

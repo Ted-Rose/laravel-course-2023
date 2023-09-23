@@ -45,7 +45,8 @@ class EventResource extends JsonResource
           // for each event
           'user' => new UserResource($this->whenLoaded('user')),
           'attendees' => AttendeeResource::collection(
-                $this->whenLoaded('attendees')),
+                $this->whenLoaded('attendees')
+          )
         ];
     }
 }

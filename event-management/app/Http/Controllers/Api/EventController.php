@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\EventResource;
-use Illuminate\Http\Request;
 use App\Models\Event;
+use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
@@ -23,7 +23,9 @@ class EventController extends Controller
 
         // Add user relationship in order to show user for each event.
         // Also EventResource has to be updated.
-        return EventResource::collection(Event::with('user')->get());
+        return EventResource::collection(
+          Event::with('user')->paginate()
+        );
 
     }
 
@@ -49,7 +51,9 @@ class EventController extends Controller
             // to user_id 1
             'user_id' => 1
         ]);
-        return $event;
+        // return $event;
+        return new EventResource($event);
+
     }
 
     /**
