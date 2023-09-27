@@ -3,6 +3,9 @@
 namespace App\Http\Traits;
 
 use Illuminate\Database\Eloquent\Model;
+// HasMany has to be added to the
+// CanLoadRelationships methods inputs to avoid error
+use Illuminate\Database\Eloquent\Relations\HasMany;
 // Import the builder classes
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
@@ -13,7 +16,7 @@ trait CanLoadRelationships
   public function CanLoadRelationships(
     // Load relationships for something - ether
     // model or query builder.
-    Model|QueryBuilder|EloquentBuilder $for,
+    Model|QueryBuilder|EloquentBuilder|HasMany $for,
     // Relations parameter is useful is if you
     // want to customize what relations can be loaded
     // for every single action in controler.
@@ -22,7 +25,7 @@ trait CanLoadRelationships
     // But if array can be not passed in you have to assign
     // null to it.
     ?array $relations = null
-  ): Model|QueryBuilder|EloquentBuilder{
+  ): Model|QueryBuilder|EloquentBuilder|HasMany {
     // If relations is not set we use the field called relations
     // defined within the class the trait is used.
     // If no relations found then use empty array and foreach
