@@ -4,31 +4,29 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\EventResource;
+use App\Http\Traits\CanLoadRelationships;
 use App\Models\Event;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
+    use CanLoadRelationships;
+
+    // Set relations field here to set default value for howl class.
+    private array $relations = ['user', 'attendees', 'attendees.user'];
     /**
      * Display a listing of the resource.
      */
     public function index()
     {    
-        // Start query builder for this event model
-        $query = Event::query();
         // Possible relations to control what can be loaded
         $relations = ['user', 'attendees', 'attendees.user'];
+        // Start query builder by pointing to the method
+        // that has been added by trait.
+        $query = $this->CanLoadRelationships(Event::query(), $relations);
 
-        foreach ($relations as $relation) {
-            // Each query has when method - when first argument passed
-            // is true it will run the second function that will alter
-            // the query
-            $query->when(
-              $this->shouldIncludeRelation($relation),
-              // Run this function q if this relation should be included
-              fn($q) => $q->with($relation),
-            );
-        }
+        // // Also works:
+        // $query = $this->CanLoadRelationships(Event::query());
 
         // Add user relationship in order to show user for each event.
         // Also EventResource has to be updated.
@@ -38,27 +36,7 @@ class EventController extends Controller
             $query->latest()->paginate()
         );
     }
-
-    // No need to pass  the request object because Laravel can get
-    // the current request using request function
-    protected function shouldIncludeRelation(string $relation): bool
-    {
-      // Using query method get query parameter 'include'
-      $include = request()->query('include');
-
-      // If include is not set, return false meaning that this relation that was passed
-      // as an argument should not be included
-      if (!$include) {
-          return false;
-      }
-      // trim is an inbuilt function in PHP that trims all empty spaces
-      $relations = array_map('trim', explode(',', $include));
-
-      // Check if specific relation past into this method is inside the
-      // relations array
-      return in_array($relation, $relations);
-
-    }
+    
     public function store(Request $request)
     {
         $event = Event::create([
@@ -79,7 +57,7 @@ class EventController extends Controller
             'user_id' => 1
         ]);
         // return $event;
-        return new EventResource($event);
+        return new EventResource($this->CanLoadRelationships($event));
 
     }
 
@@ -90,11 +68,13 @@ class EventController extends Controller
     {
       // return $event;
 
-      // Load the user and attendees to return user
-      // and attendees for the specific event
-      $event->load('user', 'attendees');
+      // No longer needed $event as CanLoadRelationships
+      // method is passed into this object
+      // // Load the user and attendees to return user
+      // // and attendees for the specific event
+      // $event->load('user', 'attendees');
 
-      return new EventResource($event);
+      return new EventResource($this->CanLoadRelationships($event));
     }
 
     /**
@@ -111,7 +91,7 @@ class EventController extends Controller
             ])
         );
 
-        return new EventResource($event);
+        return new EventResource($this->CanLoadRelationships($event));
     }
 
     /**

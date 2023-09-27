@@ -10,6 +10,11 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Event extends Model
 {
     use HasFactory;
+    // HasFactory is an trait. Traits are always added to classes.
+    // Synthax is "use TraitName"
+
+    // Importing an trait to an model allows to use traits methods
+    // without inheritence from a parent class
 
     protected $fillable = ['name', 'description', 'start_time', 'end_time', 'user_id'];
 
