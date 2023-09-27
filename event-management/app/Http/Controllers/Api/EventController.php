@@ -13,7 +13,26 @@ class EventController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {   
+    {    
+        // Start query builder for this event model
+        $query = Event::query();
+        // Possible relations to control what can be loaded
+        $relations = ['user', 'attendees', 'attendees.user'];
+
+        foreach ($relations as $relation) {
+            // Each query has when method - when first argument passed
+            // is true it will run the second function that will alter
+            // the query
+            $query->when(
+              $this->shouldIncludeRelation($relation),
+              // Run this function q if this relation should be included
+              fn($q) => $q->with($relation),
+            );
+        }
+
+        // Check if user relation is in the relations in the url
+        // $this->shouldIncludeRelation('user');
+
         // Returns array of all events
         // return Event::all();
         
@@ -24,14 +43,40 @@ class EventController extends Controller
         // Add user relationship in order to show user for each event.
         // Also EventResource has to be updated.
         return EventResource::collection(
-          Event::with('user')->paginate()
-        );
+          // We are creating an query by calling event, loading one
+          // event and paginating
+          // Event::with('user')->paginate()
 
+          // // We already have the query so lets call it. Lets add also
+          // // latest to call from latest events.
+            $query->latest()->paginate()
+        );
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    // No need to pass  the request object because Laravel can get
+    // the current request using request function
+    protected function shouldIncludeRelation(string $relation): bool
+    {
+      // Using query method get query parameter 'include'
+      $include = request()->query('include');
+
+      // dd($include);
+      // Logs:
+      // "user,attendees,attendees.user" // app\Http\Controllers\Api\EventController.php:39
+
+      // If include is not set, return false meaning that this relation that was passed
+      // as an argument should not be included
+      if (!$include) {
+          return false;
+      }
+      // trim is an inbuilt function in PHP that trims all empty spaces
+      $relations = array_map('trim', explode(',', $include));
+
+      // Check if specific relation past into this method is inside the
+      // relations array
+      return in_array($relation, $relations);
+
+    }
     public function store(Request $request)
     {
         $event = Event::create([
