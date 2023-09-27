@@ -30,23 +30,9 @@ class EventController extends Controller
             );
         }
 
-        // Check if user relation is in the relations in the url
-        // $this->shouldIncludeRelation('user');
-
-        // Returns array of all events
-        // return Event::all();
-        
-        // Returns collection of all events - an json object
-        // within which data key contains an array of objects
-        // return EventResource::collection(Event::all());
-
         // Add user relationship in order to show user for each event.
         // Also EventResource has to be updated.
         return EventResource::collection(
-          // We are creating an query by calling event, loading one
-          // event and paginating
-          // Event::with('user')->paginate()
-
           // // We already have the query so lets call it. Lets add also
           // // latest to call from latest events.
             $query->latest()->paginate()
@@ -59,10 +45,6 @@ class EventController extends Controller
     {
       // Using query method get query parameter 'include'
       $include = request()->query('include');
-
-      // dd($include);
-      // Logs:
-      // "user,attendees,attendees.user" // app\Http\Controllers\Api\EventController.php:39
 
       // If include is not set, return false meaning that this relation that was passed
       // as an argument should not be included
