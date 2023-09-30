@@ -17,16 +17,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Previously we used resource method. apiResource method will
+// register only those routes that are responsible for listing,
+// showing one resource and directly modifying it without the
+// routes for forms
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('/login', [AuthController::class, 'login']);
 Route::apiResource('events', EventController::class);
+// Attendees don't exist on their own so lets point to EventAttendeeController
 Route::apiResource('events.attendees', AttendeeController::class)
-    // Removed "['attendee' => 'event']" for that caused error (see at the end
-    // of the file)
+  // scoped means that attendee resources are always part of an event
+  // so when using route model binding laravel will automatically load it
+  // by looking parent event. So both attendee and event are requered.
+  // If attendee is not attached to any event then laravel will throw error
     ->scoped()->except(['update']);
-
-/* 
-Error returned:
-"message": "SQLSTATE[42S22]: Column not found: 1054 Unknown column 'event' in 'where clause' (Connection: mysql, SQL: select * from `attendees` where `attendees`.`event_id` = 10 and `attendees`.`event_id` is not null and `event` = 1822 limit 1)", */
