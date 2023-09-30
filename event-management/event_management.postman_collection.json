@@ -812,6 +812,16 @@
 		{
 			"name": "Create an Event",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|i5sRIjI3lV4H6FneWio6E52LK4eA5fe0fsz5DSgH",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -822,7 +832,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"2nd event\",\r\n    \"start_time\": \"2023-07-01 15:00:00\",\r\n    \"end_time\": \"2023-07-02 14:55:00\"\r\n}",
+					"raw": "{\r\n    \"name\": \"2nd event\",\r\n    \"start_time\": \"2023-07-01 15:00:00\",\r\n    \"end_time\": \"2023-07-02 14:55:00\",\r\n    \"id\": \"15\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

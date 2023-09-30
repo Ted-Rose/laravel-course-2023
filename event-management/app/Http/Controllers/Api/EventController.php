@@ -14,6 +14,12 @@ class EventController extends Controller
 
     // Set relations field here to set default value for howl class.
     private array $relations = ['user', 'attendees', 'attendees.user'];
+
+    public function __construct()
+    {
+        $this->middleware('auth:sanctum')->except(['index', 'show']);
+    }
+
     /**
      * Display a listing of the resource.
      */
