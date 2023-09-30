@@ -589,11 +589,11 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 27 Sep 2023 21:18:44 GMT"
+							"value": "Wed, 27 Sep 2023 21:25:29 GMT"
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 27 Sep 2023 21:18:44 GMT"
+							"value": "Wed, 27 Sep 2023 21:25:29 GMT"
 						},
 						{
 							"key": "Connection",
@@ -617,7 +617,7 @@
 						},
 						{
 							"key": "X-RateLimit-Remaining",
-							"value": "59"
+							"value": "58"
 						},
 						{
 							"key": "Access-Control-Allow-Origin",
@@ -625,7 +625,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"data\": [\n        {\n            \"id\": 1971,\n            \"user_id\": 1,\n            \"event_id\": 15,\n            \"created_at\": \"2023-09-27T21:17:51.000000Z\",\n            \"updated_at\": \"2023-09-27T21:17:51.000000Z\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Mavis Mills\",\n                \"email\": \"valerie17@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:32.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:33.000000Z\"\n            }\n        },\n        {\n            \"id\": 1970,\n            \"user_id\": 1,\n            \"event_id\": 15,\n            \"created_at\": \"2023-09-27T21:17:25.000000Z\",\n            \"updated_at\": \"2023-09-27T21:17:25.000000Z\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Mavis Mills\",\n                \"email\": \"valerie17@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:32.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:33.000000Z\"\n            }\n        },\n        {\n            \"id\": 1969,\n            \"user_id\": 1,\n            \"event_id\": 12,\n            \"created_at\": \"2023-09-27T21:17:18.000000Z\",\n            \"updated_at\": \"2023-09-27T21:17:18.000000Z\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Mavis Mills\",\n                \"email\": \"valerie17@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:32.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:33.000000Z\"\n            }\n        },\n        {\n            \"id\": 1968,\n            \"user_id\": 1,\n            \"event_id\": 12,\n            \"created_at\": \"2023-09-27T21:17:16.000000Z\",\n            \"updated_at\": \"2023-09-27T21:17:16.000000Z\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Mavis Mills\",\n                \"email\": \"valerie17@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:32.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:33.000000Z\"\n            }\n        },\n        {\n            \"id\": 1967,\n            \"user_id\": 1,\n            \"event_id\": 12,\n            \"created_at\": \"2023-09-27T21:16:37.000000Z\",\n            \"updated_at\": \"2023-09-27T21:16:37.000000Z\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Mavis Mills\",\n                \"email\": \"valerie17@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:32.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:33.000000Z\"\n            }\n        },\n        {\n            \"id\": 1966,\n            \"user_id\": 1,\n            \"event_id\": 12,\n            \"created_at\": \"2023-09-27T21:16:01.000000Z\",\n            \"updated_at\": \"2023-09-27T21:16:01.000000Z\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Mavis Mills\",\n                \"email\": \"valerie17@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:32.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:33.000000Z\"\n            }\n        },\n        {\n            \"id\": 1965,\n            \"user_id\": 1,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T05:14:33.000000Z\",\n            \"updated_at\": \"2023-09-23T05:14:33.000000Z\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Mavis Mills\",\n                \"email\": \"valerie17@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:32.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:33.000000Z\"\n            }\n        },\n        {\n            \"id\": 1393,\n            \"user_id\": 711,\n            \"event_id\": 93,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 711,\n                \"name\": \"Dr. Mavis Okuneva I\",\n                \"email\": \"antonio.wuckert@example.com\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 1387,\n            \"user_id\": 706,\n            \"event_id\": 135,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 706,\n                \"name\": \"Jermain Harber\",\n                \"email\": \"kemmer.noemi@example.com\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 1388,\n            \"user_id\": 707,\n            \"event_id\": 159,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 707,\n                \"name\": \"Fae Hagenes\",\n                \"email\": \"schumm.pete@example.com\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 1390,\n            \"user_id\": 709,\n            \"event_id\": 28,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 709,\n                \"name\": \"Akeem Veum\",\n                \"email\": \"aurelie42@example.net\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 1384,\n            \"user_id\": 705,\n            \"event_id\": 187,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 705,\n                \"name\": \"Cornelius Jerde I\",\n                \"email\": \"walter.donnelly@example.com\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 1389,\n            \"user_id\": 708,\n            \"event_id\": 113,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 708,\n                \"name\": \"Mr. Merlin Swaniawski V\",\n                \"email\": \"aileen.conn@example.net\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 1392,\n            \"user_id\": 710,\n            \"event_id\": 110,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 710,\n                \"name\": \"Prof. Sonya D'Amore III\",\n                \"email\": \"viviane37@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 1391,\n            \"user_id\": 710,\n            \"event_id\": 19,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 710,\n                \"name\": \"Prof. Sonya D'Amore III\",\n                \"email\": \"viviane37@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/events/10/attendees?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/events/10/attendees?page=132\",\n        \"prev\": null,\n        \"next\": \"http://127.0.0.1:8000/api/events/10/attendees?page=2\"\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 132,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=3\",\n                \"label\": \"3\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=4\",\n                \"label\": \"4\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=5\",\n                \"label\": \"5\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=6\",\n                \"label\": \"6\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=7\",\n                \"label\": \"7\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=8\",\n                \"label\": \"8\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=9\",\n                \"label\": \"9\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=10\",\n                \"label\": \"10\",\n                \"active\": false\n            },\n            {\n                \"url\": null,\n                \"label\": \"...\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=131\",\n                \"label\": \"131\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=132\",\n                \"label\": \"132\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://127.0.0.1:8000/api/events/10/attendees\",\n        \"per_page\": 15,\n        \"to\": 15,\n        \"total\": 1970\n    }\n}"
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1965,\n            \"user_id\": 1,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T05:14:33.000000Z\",\n            \"updated_at\": \"2023-09-23T05:14:33.000000Z\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Mavis Mills\",\n                \"email\": \"valerie17@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:32.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:33.000000Z\"\n            }\n        },\n        {\n            \"id\": 1516,\n            \"user_id\": 778,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 778,\n                \"name\": \"Prof. Rosemary Tremblay\",\n                \"email\": \"wokeefe@example.net\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 1588,\n            \"user_id\": 815,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 815,\n                \"name\": \"Breanne Hegmann III\",\n                \"email\": \"jaylin05@example.net\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 1658,\n            \"user_id\": 844,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 844,\n                \"name\": \"Miss Shaina Roob DDS\",\n                \"email\": \"francesca05@example.net\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 1752,\n            \"user_id\": 889,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 889,\n                \"name\": \"Mabelle Lakin\",\n                \"email\": \"kailee.paucek@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 1899,\n            \"user_id\": 967,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 967,\n                \"name\": \"Al Effertz\",\n                \"email\": \"martin.kemmer@example.net\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 1906,\n            \"user_id\": 970,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:37.000000Z\",\n            \"user\": {\n                \"id\": 970,\n                \"name\": \"Dexter Stiedemann\",\n                \"email\": \"kerluke.olga@example.net\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 681,\n            \"user_id\": 349,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:36.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:36.000000Z\",\n            \"user\": {\n                \"id\": 349,\n                \"name\": \"Raphael Ward\",\n                \"email\": \"rahsaan32@example.net\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:33.000000Z\"\n            }\n        },\n        {\n            \"id\": 748,\n            \"user_id\": 386,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:36.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:36.000000Z\",\n            \"user\": {\n                \"id\": 386,\n                \"name\": \"Lempi Kunze\",\n                \"email\": \"landen48@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 958,\n            \"user_id\": 495,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:36.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:36.000000Z\",\n            \"user\": {\n                \"id\": 495,\n                \"name\": \"Candace Koch Sr.\",\n                \"email\": \"kautzer.kristin@example.net\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 1139,\n            \"user_id\": 591,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:36.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:36.000000Z\",\n            \"user\": {\n                \"id\": 591,\n                \"name\": \"Jordon Boehm\",\n                \"email\": \"jenkins.hassie@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:34.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:34.000000Z\"\n            }\n        },\n        {\n            \"id\": 60,\n            \"user_id\": 31,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:35.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:35.000000Z\",\n            \"user\": {\n                \"id\": 31,\n                \"name\": \"Avis Morissette\",\n                \"email\": \"joanie.gorczany@example.org\",\n                \"email_verified_at\": \"2023-09-23T04:59:32.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:33.000000Z\"\n            }\n        },\n        {\n            \"id\": 164,\n            \"user_id\": 82,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:35.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:35.000000Z\",\n            \"user\": {\n                \"id\": 82,\n                \"name\": \"Prof. Arch Watsica III\",\n                \"email\": \"adelia.satterfield@example.com\",\n                \"email_verified_at\": \"2023-09-23T04:59:32.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:33.000000Z\"\n            }\n        },\n        {\n            \"id\": 262,\n            \"user_id\": 135,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:35.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:35.000000Z\",\n            \"user\": {\n                \"id\": 135,\n                \"name\": \"Dr. Frederik Langosh\",\n                \"email\": \"trace29@example.com\",\n                \"email_verified_at\": \"2023-09-23T04:59:32.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:33.000000Z\"\n            }\n        },\n        {\n            \"id\": 304,\n            \"user_id\": 157,\n            \"event_id\": 10,\n            \"created_at\": \"2023-09-23T04:59:35.000000Z\",\n            \"updated_at\": \"2023-09-23T04:59:35.000000Z\",\n            \"user\": {\n                \"id\": 157,\n                \"name\": \"Esta Stanton\",\n                \"email\": \"adavis@example.com\",\n                \"email_verified_at\": \"2023-09-23T04:59:32.000000Z\",\n                \"created_at\": \"2023-09-23T04:59:33.000000Z\",\n                \"updated_at\": \"2023-09-23T04:59:33.000000Z\"\n            }\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/events/10/attendees?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/events/10/attendees?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/events/10/attendees?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://127.0.0.1:8000/api/events/10/attendees\",\n        \"per_page\": 15,\n        \"to\": 15,\n        \"total\": 15\n    }\n}"
 				}
 			]
 		},
@@ -1492,6 +1492,117 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"data\": {\n        \"id\": 7,\n        \"name\": \"Molestiae repudiandae quos.\",\n        \"description\": \"Omnis odio nihil totam dolores. Ratione veritatis est hic inventore non neque. Eos explicabo occaecati sit maxime quae.\",\n        \"start_time\": \"1993-09-19 21:52:33\",\n        \"end_time\": \"1987-10-29 14:25:31\",\n        \"user\": {\n            \"id\": 300,\n            \"name\": \"Laurence Maggio\",\n            \"email\": \"jakubowski.hyman@example.net\",\n            \"email_verified_at\": \"2023-09-22T11:24:11.000000Z\",\n            \"created_at\": \"2023-09-22T11:24:12.000000Z\",\n            \"updated_at\": \"2023-09-22T11:24:12.000000Z\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"valerie17@example.org\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"valerie17@example.org\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Sep 2023 17:06:44 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Sep 2023 17:06:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"3|i5sRIjI3lV4H6FneWio6E52LK4eA5fe0fsz5DSgH\"\n}"
 				}
 			]
 		}

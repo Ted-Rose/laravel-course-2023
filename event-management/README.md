@@ -20,4 +20,11 @@ Provider classes setup the project telling Laravel how to behave.
 * `php artisan make:seeder AttendeeSeeder`
 * Updates seeders
 * `php artisan migrate:refresh --seed`
+* `php artisan make:controller Api/AuthController --api`
+
 # Instructions
+* Import `event_management.postman_collection.json` in Postman
+* `cd .\event-management\` - to change directory to current project
+* `php artisan serve` - to start the project
+* `php artisan route:list` - to list all avaiable routes
+* Make requests in Postman

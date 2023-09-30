@@ -19,6 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('/login', [AuthController::class, 'login']);
+
 // Previously we used resource method. apiResource method will
 // register only those routes that are responsible for listing,
 // showing one resource and directly modifying it without the
